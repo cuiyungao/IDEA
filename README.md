@@ -18,12 +18,12 @@ rating******review text******title******date******version******nation
 
 ```
 $ python
-$ import nlkt
-$ nltk.download('averaged_perceptron_tagger')
-$ nltk.download('stopwords')
+>> import nlkt
+>> nltk.download('averaged_perceptron_tagger')
+>> nltk.download('stopwords')
 ```
 
-2. **Notice:** If it is the first time to use IDEA in your computer, you need to compile pyx and c. Also make sure `_lda.c` and `_lda.so` have been deleted before running the command. Under the `src` folder, and run:
+2. **Notice:** If it is the first time to use IDEA in your computer, you need to compile pyx and c. Also make sure `_lda.c` and `_lda.so` have been deleted before running the command. Under the `src` folder, run:
 
 ```
 $ python build_pyx.py build_ext --inplace
@@ -48,18 +48,18 @@ result_folder     the output dir of IDEA, should contain apk name, e.g., '../res
 K     the number of topics
 ```
 
-2. Use localhost server to display the topic river. For Python 2, run `$ python -m SimpleHTTPServer 8000`, while for Python 3, run `python -m http.server`.
+2. Use localhost server to display the topic river. For Python 2, run `$ python -m SimpleHTTPServer 7778`, while for Python 3, run `python -m http.server 7778`. 7778 is the port number for viewing the visualization, e.g., for localhost, we use localhost:7778 to observe the topic river.
 
-*For Linux or Mac:*, can simply run:
+**For Linux or Mac:**, can simply run:
 
 ```
-$bash visualize.sh <result_folder> <K>
+$ bash visualize.sh <result_folder> <K>
 ```
 
 ## Validation
-1. Download the word2vec model trained on 4 millions app reviews from this [link] ().
+1. Download the word2vec model trained on 4 millions app reviews from this [link] (https://www.dropbox.com/s/et4n6sj3k94ku2s/wv.zip?dl=0), and unzip the file to the `model` folder.
 
-2. Uncomment the code of line 494 in `main.py`, and run the script.
+2. Uncomment the code of line 486 in `main.py`, and run the script.
 
 ```
 $ python main.py

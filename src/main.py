@@ -483,7 +483,7 @@ def topic_labeling(OLDA_input, apk_phis, phrases, mu, lam, theta, save=True):
 
         ############################################
         #### uncomment the line below for verification
-        validation(validate_files[apk], label_phrases, label_sents, emerge_phrases, emerge_sents)
+        # validation(validate_files[apk], label_phrases, label_sents, emerge_phrases, emerge_sents)
         ############################################
 
         if save:

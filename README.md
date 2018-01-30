@@ -63,7 +63,7 @@ $ bash visualize.sh <result_folder> <K>
 $ python main.py
 ```
 
-## Related Code
-
+## Related Link
+* [Paper website], you can see more details about the experiments.
 
 ## History

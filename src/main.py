@@ -46,6 +46,7 @@ win_size = Config.get_window_size()
 bigram_min = Config.get_bigram_min()
 trigram_min = Config.get_trigram_min()
 info_num = Config.get_info_num()
+val_index = Config.get_validate_or_not()
 
 
 def extract_review():
@@ -483,7 +484,8 @@ def topic_labeling(OLDA_input, apk_phis, phrases, mu, lam, theta, save=True):
 
         ############################################
         #### uncomment the line below for verification
-        # validation(validate_files[apk], label_phrases, label_sents, emerge_phrases, emerge_sents)
+        if val_index:
+            validation(validate_files[apk], label_phrases, label_sents, emerge_phrases, emerge_sents)
         ############################################
 
         if save:

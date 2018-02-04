@@ -16,6 +16,7 @@ class Config(object):
     __SEC_TOPICS = "Topics"
     __SEC_PHRASES = "Phrases"
     __SEC_VALIDATE = "ValidateFiles"
+    __SEC_VAL = "Validate"
 
     @classmethod
     def get_section_list(cls):
@@ -85,4 +86,8 @@ class Config(object):
 
         :return: dictionary of {apk: path_to_changelog}
         """
-        return cls.Parser._sections["ValidateFiles"]
+        return cls.Parser._sections[cls.__SEC_VALIDATE]
+
+    @classmethod
+    def get_validate_or_not(cls):
+        return cls.__get_attr(int, cls.__SEC_VAL, "Validate")

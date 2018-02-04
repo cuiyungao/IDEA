@@ -57,13 +57,14 @@ $ bash visualize.sh <result_folder> <K>
 ## Validation
 1. Download the word2vec model trained on 4 millions app reviews from this [link](https://www.dropbox.com/s/et4n6sj3k94ku2s/wv.zip?dl=0), and unzip the directory in the `model` folder.
 
-2. Uncomment the code of line 486 in `main.py`, and run the script.
+2. Change the value of `Validate` in `config.ini` to be `1`, and run the script.
 
 ```
 $ python main.py
 ```
 
 ## Related Link
-* [Paper website], you can see more details about the experiments.
+* [ReMine-Lab](https://remine-lab.github.io/), you can see our other work.
 
 ## History
+2018-2-4: first version of IDEA
